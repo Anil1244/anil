@@ -7,6 +7,7 @@ body {
 
 .container {
     width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
 }
@@ -73,11 +74,43 @@ ul {
     padding-left: 20px;
 }
 
+strong {
+    font-weight: 500;
+}
+
 /* Profile Picture */
 .profile-pic {
     max-width: 200px;
     border-radius: 50%;
     margin-bottom: 20px;
+}
+
+/* Blog Section Styles */
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.post h3 {
+    margin: 0 0 10px;
+    font-weight: 500;
+}
+
+.post h3 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.post h3 a:hover {
+    color: #007BFF;
+}
+
+.post p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
 }
 
 /* Footer Styles */
@@ -103,6 +136,7 @@ footer p {
     border: none;
     padding: 10px 15px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 #back-to-top:hover {
@@ -128,6 +162,10 @@ footer p {
 
     header, footer {
         text-align: center;
+    }
+
+    .blog-posts {
+        gap: 30px;
     }
 }
 
