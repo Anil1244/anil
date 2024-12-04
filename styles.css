@@ -86,48 +86,37 @@ strong {
     margin-bottom: 20px; /* Space below the image. */
 }
 
-/* Blog Post Styles */
-/* Styles for the layout of blog posts. */
+/* Blog Posts Grid */
 .blog-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three columns */
+    gap: 20px; /* Space between rows and columns */
+    margin-top: 30px; /* Top margin for the blog post section */
+}
+
+.post {
     display: flex;
-    flex-direction: column;
-    gap: 40px;
-    margin-top: 30px;
+    flex-direction: column; /* Aligns thumbnail and title vertically */
+    align-items: center; /* Centers the content */
+}
+
+.post-thumbnail {
+    width: 100%; /* Adjusts the width to fit the container */
+    max-width: 300px; /* Maximum width of thumbnails */
+    height: 300px; /* Maintains the aspect ratio */
+    border-radius: 10px; /* Adds rounded corners */
+    margin-bottom: 10px; /* Space between the thumbnail and the title */
 }
 
 .post h3 {
-    margin: 0 0 10px;
-    font-weight: 500;
+    margin: 0; /* Removes margin from post titles */
+    text-align: center; /* Centers the title text */
 }
 
 .post h3 a {
-    text-decoration: none;
-    color: #333;
+    color: #333; /* Text color for post titles */
+    font-size: 18px; /* Font size for readability */
 }
-
-.post h3 a:hover {
-    color: #007BFF;
-}
-
-.post p {
-    margin: 0;
-    color: #555;
-    line-height: 1.6;
-}
-
-/* Blog Post Thumbnails */
-/* Specific styles for thumbnails in blog posts. */
-.post-thumbnail {
-    width: 100%; /* Adjusts the width to fit the container */
-    max-width: 400px; /* Sets a maximum width to prevent the image from being too large */
-    height: auto; /* Maintains the aspect ratio */
-    border-radius: 10px; /* Adds rounded corners (optional) */
-    margin-bottom: 20px; /* Space between the thumbnail and the text */
-    display: block; /* Ensures the image is a block element to center it */
-    margin-left: auto; /* Centers the image horizontally */
-    margin-right: auto;
-}
-
 /* Footer Styles */
 /* Styling for the footer which appears at the bottom of all pages. */
 footer {
@@ -154,6 +143,10 @@ footer p {
 .social-media a:hover {
     color: #ddd; /* Light grey color on hover for visual feedback. */
 }
+.post-thumbnail:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+    transition: transform 0.3s ease; /* Smooth transition for the transform */
+}
 
 /* Back to Top Button Styles */
 /* Styling for the 'Back to Top' button that appears when scrolling down. */
@@ -173,8 +166,18 @@ footer p {
     background-color: #555; /* Darker background on hover for visual feedback. */
 }
 
-/* Responsive Styles */
-/* Adjustments for smaller screens and mobile devices. */
+/* Responsive Adjustments for smaller screens */
+@media (max-width: 1024px) {
+    .blog-posts {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-posts {
+        grid-template-columns: 1fr; /* One column on very small screens */
+    }
+}
 @media (max-width: 768px) {
     header .container {
         flex-direction: column; /* Stacks the navigation items vertically on smaller screens. */
@@ -191,12 +194,7 @@ footer p {
     header, footer {
         text-align: center; /* Centers the content in the header and footer on smaller screens. */
     }
-    .blog-posts {
-        gap: 30px; /* Reduces the gap between blog posts for tighter vertical spacing. */
-    }
-    .post-thumbnail {
-        max-width: 100%; /* Allows the image to expand to the full container width on smaller screens */
-    }
+
 }
 
 /* Smooth Scrolling */
