@@ -1,4 +1,4 @@
-// Back to Top Button Functionality
+// Functionality for the Back to Top button
 const backToTopButton = document.getElementById('back-to-top');
 
 window.onscroll = function() {
@@ -9,6 +9,11 @@ window.onscroll = function() {
     }
 };
 
-backToTopButton.addEventListener('click', function(){
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+backToTopButton.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 });
+
+
