@@ -117,6 +117,40 @@ strong {
     color: #333; /* Text color for post titles */
     font-size: 18px; /* Font size for readability */
 }
+/* General container styling for blog posts */
+#blog-post .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Blog title */
+#blog-post h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Post date styling */
+#blog-post .post-date {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+#blog-post p {
+    margin: 0 20px;
+    text-align: justify;
+    line-height: 1.6; /* Adjust line height for readability */
+}
+
+/* Centered image styling */
+#blog-post .post-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Adds rounded corners */
+}
 /* Footer Styles */
 /* Styling for the footer which appears at the bottom of all pages. */
 footer {
